@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="renren:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="renren-security.war">
+      <element id="artifact" artifact-name="renren:war exploded" />
+    </root>
+  </artifact>
+</component>

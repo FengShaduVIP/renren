@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+#parse("sys/header.html")
+</head>
+<body>
+<div class="panel panel-default" id="rrapp" v-cloak>
+	<div class="panel-heading">{{title}}</div>
+	<form class="form-horizontal">
+		<div class="form-group">
+		   	<div class="col-sm-2 control-label">试卷标题</div>
+		   	<div class="col-sm-10">
+		      <input type="text" class="form-control" v-model="examPaper.title" placeholder="试卷标题"/>
+		    </div>
+		</div>
+		<div class="form-group">
+		   	<div class="col-sm-2 control-label">试卷要求</div>
+		   	<div class="col-sm-10">
+		   		<textarea class="form-control" v-model="examPaper.detail"  name="detail" id="detail"></textarea>
+		      <!-- <input type="text" class="form-control" v-model="examPaper.detail" placeholder="试卷要求"/> -->
+		    </div>
+		</div>
+		<!-- <div class="form-group">
+		   	<div class="col-sm-2 control-label">创建时间</div>
+		   	<div class="col-sm-10">
+		      <input type="text" class="form-control" v-model="examPaper.createTime" placeholder="创建时间"/>
+		    </div>
+		</div>
+		<div class="form-group">
+		   	<div class="col-sm-2 control-label">作者id</div>
+		   	<div class="col-sm-10">
+		      <input type="text" class="form-control" v-model="examPaper.authorId" placeholder="作者id"/>
+		    </div>
+		</div> -->
+		<div class="form-group">
+			<div class="col-sm-2 control-label"></div> 
+			<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+			&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="back" value="返回"/>
+		</div>
+	</form>
+</div>
+
+<script src="${rc.contextPath}/js/exampaper/exampaper_add.js?_${date.systemTime}"></script>
+<script type="text/javascript">
+CKEDITOR.replace('detail');
+</script>
+</body>
+</html>
